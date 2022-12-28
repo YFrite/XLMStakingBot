@@ -6,5 +6,8 @@ build:
 compose_start:
 	docker-compose up -d
 
+dev:
+	pip install -r dev-requiremets.txt
+
 run:
-	python -m main.py
+	python main.py
