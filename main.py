@@ -1,26 +1,19 @@
 import os
 
-from pyrogram import Client
+from aiogram import Bot, Dispatcher
+from aiogram.utils import executor
 from dotenv import load_dotenv
-from pyrogram.types import Message
 
 load_dotenv(".env")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-APP_ID = os.getenv("APP_ID")
-APP_HASH = os.getenv("APP_HASH")
+SKIP_UPDATES = bool(os.getenv("SKIP_UPDATES"))
 
-print(APP_HASH)
-
-app = Client(name="main_app",
-             api_hash=APP_HASH,
-             api_id=APP_ID,
-             bot_token=BOT_TOKEN)
+bot = Bot(token=BOT_TOKEN)
+dp = Dispatcher(bot)
 
 
-@app.on_message()
-async def handler(client: Client, message: Message):
-    await message.reply("Test")
-
+async def startup(dispatcher: Dispatcher):
+    pass
 
 if __name__ == "__main__":
-    app.run()
+    executor.start_polling(dp, on_startup=startup, skip_updates=SKIP_UPDATES)

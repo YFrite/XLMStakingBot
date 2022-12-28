@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  service-name:
+    image: xlm_staking
+    container_name: xlm_staking
+    build:
+      context: .
+    restart: on-failure
+    env_file:
+      - .env

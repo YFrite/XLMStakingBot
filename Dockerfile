@@ -1,8 +1,8 @@
 FROM python:3.7-slim
 
-WORKDIR /XLMStaking
+WORKDIR /xlm_staking
 
-COPY . ./
+COPY . /xlm_staking
 
 RUN pip3 install -r requirements.txt
 

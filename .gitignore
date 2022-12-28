@@ -1,4 +1,6 @@
 .idea
 venv
+locales
 
 .env
+main_app.session
