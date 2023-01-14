@@ -1,11 +1,13 @@
 # Messages
-Hello = Hi, i'm bot for staking XLM (Lumen)
-
+message-hello = Hi, i'm bot for staking XLM (Lumen)
+message-credentials = My developer is YFrite
+message-cancelled = Cancelled
+message-menu = Menu
 
 # Button's and Filter's
-Wallet = Wallet
-Staking = Staking
-Partners = Partners
-Credentials = Credentials
-Cancel = Cancel
-Cancelled = Cancelled
+wallet = Wallet
+staking = Staking
+partners = Partners
+credentials = Credentials
+settings = Settings
+cancel = Cancel
